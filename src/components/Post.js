@@ -1,7 +1,6 @@
 import React from 'react';
-import marked from 'marked';
 
-const Post = ({ movie, pr }) => {
+const Post = ({ movie }) => {
 	console.log(movie);
 	const { title, poster, rating, description, casts,  trivia, order } = movie.fields;
 	return (
