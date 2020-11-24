@@ -3,7 +3,6 @@ import './App.css';
 import { client } from './client';
 import Posts from './components/Posts';
 
-
 class App extends React.Component {
 	state = {
 		movies: [],
@@ -13,9 +12,13 @@ class App extends React.Component {
 		client
 			.getEntries({ content_type: 'movies' })
 			.then((response) => {
-				console.log(response.items);
+				// unsorted array of posts
+				console.log(response);
 				this.setState({
-					movies: response.items,
+					//sorting the array according to order
+					movies: response.items.sort((a, b) => {
+						return a.fields.order - b.fields.order;
+					}),
 				});
 			})
 			.catch(console.error);
@@ -24,7 +27,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-                    <div className="container">
+				<div className="container">
 					<header>
 						<div className="wrapper">
 							<span className="logo">IMDB top-100</span>
@@ -36,7 +39,6 @@ class App extends React.Component {
 						</div>
 					</main>
 				</div>
-			
 			</div>
 		);
 	}
