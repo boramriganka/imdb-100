@@ -1,11 +1,9 @@
 import React from 'react';
 import marked from 'marked';
-import Skeleton from '@material-ui/lab/Skeleton';
 
 const Post = ({ movie, pr }) => {
 	console.log(movie);
-	const { title, poster, rating, description, casts, gross, trivia, order } = movie.fields;
-	const postDescription = marked(description);
+	const { title, poster, rating, description, casts,  trivia, order } = movie.fields;
 	return (
 		<>
 			<div className="post">
