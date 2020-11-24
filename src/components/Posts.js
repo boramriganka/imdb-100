@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from './Post';
-import { useState } from 'react';
 import { useDarkMode } from './useDarkMode';
 import Toggle from './Toggler';
 import { ThemeProvider } from 'styled-components';
