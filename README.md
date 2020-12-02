@@ -30,8 +30,6 @@ IMDB-100 is a App that gives you information about top 100 rated movie according
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-## Demo
-<img src="src/screenshot.png" width="400"><br><img src="src/screenshot1.png" width="400">
 
 ## Live demo
 [LIVE](https://imdb100.netlify.com)
